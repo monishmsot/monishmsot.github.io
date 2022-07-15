@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="assets/css/style.css"> 
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<title>Content</title>
+</head>
+<body class="cms-page-view">
+	<header class="page-header"></header>
+	<main class="page-main">
+		<div class="pagewidget-container fullwidth pagewidget-banner">
+			<img src="assets/images/content-lp.jpg" />
+		</div>
+		<div class="pagewidget-container pagewidget-meta">
+			<div class="pagewidget-title">Top Courses</div>
+			<ul>
+				<li><a href="javascript:void(0);">Data Science and AI</a></li>
+				<li><a href="javascript:void(0);">Certified Scrum Master (CSM)</a></li>
+				<li><a href="javascript:void(0);">Certified Scrum Product Owner (CSPO)</a></li>
+				<li><a href="javascript:void(0);">Project Management Professional (PMP)</a></li>
+				<li><a href="javascript:void(0);">ICAgile Certified Professional</a></li>
+				<li><a href="javascript:void(0);">Advanced Certified Scrum Product Owner (A-CSPO)</a></li>
+				<li><a href="javascript:void(0);">Leading SAFe® 5 Certification</a></li>
+				<li><a href="javascript:void(0);">Data Science and AI</a></li>
+				<li><a href="javascript:void(0);">Certified Scrum Master (CSM)</a></li>
+				<li><a href="javascript:void(0);">Certified Scrum Product Owner (CSPO)</a></li>
+				<li><a href="javascript:void(0);">Project Management Professional (PMP)</a></li>
+				<li><a href="javascript:void(0);">ICAgile Certified Professional</a></li>
+				<li><a href="javascript:void(0);">Advanced Certified Scrum Product Owner (A-CSPO)</a></li>
+				<li><a href="javascript:void(0);">Leading SAFe® 5 Certification</a></li>
+				<li class="manymore"> and many more...</li>
+			</ul>
+		</div>
+		<div class="pagewidget-container fullwidth pagewidget-rfq">
+			<div class="pagewidget-title">Looking for a customized course?</div>
+			<div class="pagewidget-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+			<a href="rfq.html" class="pagewidget-rfq-button">Request for Course / Quote</a>
+		</div>
+		<div class="pagewidget-container pagewidget-partners">
+			<div class="pagewidget-title">Our Partners</div>
+			<div class="pagewidget-carousel owl-carousel">
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/al.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/download.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/download_1_.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/e2f4b2_9ca4ca54f81a4f1d82f2569c7b3b14fb_mv2.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/focusu.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/ideas.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/ken.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/knolskape.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/logo_245x156.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/maxresdefault.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/mildain.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/pmc.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/resonate.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/steps.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/strengthscape-logo2-20140206145859.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/trainingsideways.jpg" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/vitalsmarts-logo-300x200_4.7.2020.png" /></a></div>
+				<div class="item"><a href="partner.html"><img src="assets/images/logos/winn_win_leadership_academy.jpg" /></a></div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer"></footer>
+	<script type="text/javascript"> 
+		$(function(){ 
+			$(".page-header").load("header.html");
+			$(".page-footer").load("footer.html");
+		});
+	</script> 
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({    
+				loop:true,
+				items:5,
+				margin:0,
+				stagePadding: 0,
+				autoplay:3000  
+			});
+
+			jQuery('.pagewidget-meta li a').on("click", function() {
+				jQuery('#cta-1-container .cta-desc').html('You can see "'+jQuery(this).text()+'" on the platform soon. In the meantime, please fill in the below information and we will reach out to you soon.');
+				jQuery('#cta-1-container').show();
+			});
+
+		});
+	</script>
+</body>
+</html>

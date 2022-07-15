@@ -1,0 +1,142 @@
+<div class="header-content">
+	<a class="logo" href="index.html" title="Ordertrainings" >
+		<img src="assets/images/ot_logo_transparent_v2_1.png" title="Ordertrainings" alt="Ordertrainings" width="56">
+	</a>
+	<div class="header-menu-container">
+		<nav class="menu-navigation">
+			<ul class="megamenu">
+				<li class="nav-item">
+					<a href="javascript:void(0)">Explore</a>
+					<div class="submenu" style="display: none;">
+						<ul class="level-1">
+							<li><a class="submenu-item submenu-item-1" data-submenuchild="1" href="javascript:void(0);">Upskilling</a></li>
+							<li><a class="submenu-item submenu-item-2" data-submenuchild="2" href="javascript:void(0);">Content</a></li>
+							<li><a href="javascript:void(0);">Public Batches</a></li>
+							<li><a href="javascript:void(0);">Coaching</a></li>
+							<li><a href="javascript:void(0);">Consulting</a></li>
+							<li><a href="javascript:void(0);">Speaker</a></li>
+							<li><a href="javascript:void(0);">Assessment</a></li>
+							<li><a href="javascript:void(0);">Degree Programs</a></li>
+							<li><a href="javascript:void(0);">Employee Engagement</a></li>
+						</ul>
+						<div class="level-2 submenu-child-1" style="display: none;">
+							<ul>
+								<li>
+									<a href="plp.html">Technical Skills</a>
+									<ul class="level-3">
+										<li><a href="plp.html">Programming Languages</a></li>
+										<li><a href="plp.html">Web Technologies</a></li>
+										<li><a href="plp.html">Mobile Technologies</a></li>
+										<li><a href="plp.html">Data Science & AI</a></li>
+										<li><a href="plp.html">DevOps</a></li>
+										<li><a href="plp.html">Storage and Networking</a></li>
+										<li><a href="plp.html">Cybersecurity</a></li>
+										<li><a href="plp.html">Software Testing</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="plp.html">Functional Skills</a>
+									<ul class="level-3">
+										<li><a href="plp.html">Sales</a></li>
+										<li><a href="plp.html">Digital Marketing</a></li>
+										<li><a href="plp.html">Finance</a></li>
+										<li><a href="plp.html">Supply Chain</a></li>
+										<li><a href="plp.html">Project Management</a></li>
+										<li><a href="plp.html">Product Management</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="plp.html">Behavioural Skills</a>
+								</li>
+								<li>
+									<a href="plp.html">Leadership Development</a>
+								</li>
+								<li>
+									<a href="plp.html">Management Development</a>
+								</li>
+								<li>
+									<a href="plp.html">Employee Engagement and Wellness</a>
+								</li>
+							</ul>
+						</div>
+						<div class="level-2 submenu-child-2" style="display: none;">
+							<ul>
+								<li>Top Courses</li>
+								<li class="submenu-child-2-texts">
+									<ul>
+										<li><a href="javascript:void(0);">Data Science and AI</a></li>
+										<li><a href="javascript:void(0);">Certified Scrum Master (CSM)</a></li>
+										<li><a href="javascript:void(0);">Certified Scrum Product Owner (CSPO)</a></li>
+										<li><a href="javascript:void(0);">Project Management Professional (PMP)</a></li>
+										<li><a href="javascript:void(0);">ICAgile Certified Professional</a></li>
+										<li><a href="javascript:void(0);">Advanced Certified Scrum Product Owner (A-CSPO)</a></li>
+										<li><a href="javascript:void(0);">Leading SAFe® 5 Certification</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="content.html"><img src="assets/images/menu-static.png"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="header-search">
+		<form method="post" action="javascript:void(0)" id="header-search-form">
+			<select name="category">
+				<option value="Upskilling">Upskilling</option>
+				<option value="Content">Content</option>
+				<option value="Public Batches">Public Batches</option>
+				<option value="Coaching">Coaching</option>
+				<option value="Consulting">Consulting</option>
+				<option value="Speaker">Speaker</option>
+				<option value="Assessment">Assessment</option>
+				<option value="Degree Programs">Degree Programs</option>
+				<option value="Employee Engagement">Employee Engagement</option>
+			</select>
+			<input type="text" name="search" />
+			<button>Search</button>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".nav-item").mouseenter(function(event) {
+	        event.stopPropagation()
+	        $(this).children('.submenu').show();
+	    }).mouseleave(function(event) {
+	        event.stopPropagation()
+	        $(this).children('.submenu').hide();
+	    });
+
+	    $(".submenu-item").mouseenter(function(event) {
+	        event.stopPropagation();
+	        $('.submenu-child-'+$(this).attr('data-submenuchild')).show();
+	    }).mouseleave(function(event) {
+	        event.stopPropagation()
+	        $('.submenu-child-'+$(this).attr('data-submenuchild')).hide();
+	    });
+
+	    $(".level-2").mouseenter(function(event) {
+	        event.stopPropagation()
+	        $(this).show();
+	    }).mouseleave(function(event) {
+	        event.stopPropagation()
+	        $(this).hide();
+	    });
+
+	    jQuery('#header-search-form').on("submit", function() {
+			if($("#header-search-form input[name='search']").val()) {
+				if(jQuery('#header-search-form select').val() == "Upskilling") {					window.location.href = "search.html";
+				} else {
+					window.location.href = "contentsearch.html";
+				}
+			}
+		});
+	});
+</script>
