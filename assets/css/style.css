@@ -1290,13 +1290,13 @@ a {
 }
 .floater-titles li {
 	float: left;
-	padding: 20px 20px;
+	padding: 18px 20px;
 	font-size: 15px;
-	border-bottom: 2px solid transparent;
+	border-bottom: 3px solid transparent;
 	cursor: pointer;
 }
 .floater-titles li.active {
-	border-bottom: 2px solid #333;
+	border-bottom: 3px solid #333;
 }
 .floater-product-select-button {
 	float: right;
