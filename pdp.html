@@ -379,15 +379,28 @@
 		jQuery(document).on('click', '.floater-titles li', function() {
         	var identifier = jQuery(this).attr('data-identifier');
 			jQuery('html, body').animate({scrollTop: jQuery("."+identifier).position().top - 50}, 800, 'swing');
-			jQuery('.floater-titles li').removeClass('active');
-			jQuery(this).addClass('active');
+			// jQuery('.floater-titles li').removeClass('active');
+			// jQuery(this).addClass('active');
 		});
 
 
 		jQuery(document).on('click', '.pdp-product-sme-button', function() {
 			jQuery('html, body').animate({scrollTop: jQuery(".pdp-product-smeconnect").position().top - 50}, 800, 'swing');
-			jQuery('.floater-titles li').removeClass('active');
-			jQuery(this).addClass('active');
+			// jQuery('.floater-titles li').removeClass('active');
+			// jQuery(this).addClass('active');
+		});
+
+
+		jQuery(document).on('click', '.pdp-objective-checkbox-label', function() {
+			if(jQuery('#pdp-objective-checkbox').is(':checked')) {
+				jQuery('html, body').animate({scrollTop: jQuery(".pdp-product-objective-ta").position().top - 50}, 800, 'swing');
+			}
+		});
+
+		jQuery(document).on('click', '.pdp-outline-checkbox-label', function() {
+			if(jQuery('#pdp-outline-checkbox').is(':checked')) {
+				jQuery('html, body').animate({scrollTop: jQuery(".pdp-product-outline-prerequisite").position().top - 50}, 800, 'swing');
+			}
 		});
 	});
 </script>
