@@ -78,6 +78,8 @@
 				</div>
 				<div class="pdp-product-objective">
 					<h2 class="title">Objective</h2>
+					<input type="checkbox" id="pdp-objective-checkbox" style="display: none;" />
+					<label for="pdp-objective-checkbox" class="pdp-objective-checkbox-label"></label>
 					<div class="pdp-product-objective-content">
 						<p>After the end of this course, the participants will be able to:</p>
 						<ul>
@@ -99,6 +101,8 @@
 			<div class="container">
 				<div class="pdp-outline">
 					<span class="title">Course Outline</span>
+					<input type="checkbox" id="pdp-outline-checkbox" style="display: none;" />
+					<label for="pdp-outline-checkbox" class="pdp-outline-checkbox-label"></label>
 					<div class="pdp-product-outline-contents">
 						<ul class="outline-contents">
 							<li class="outline-content">
@@ -290,7 +294,7 @@
 			</ul>
 			<a href="javascript:void(0)" class="floater-product-select-button">Book this Course</a>
 		</div>
-		<div class="customizable-floater" style="display: none;">
+		<div class="customizable-floater">
 			<span>This course can be tailored to suit your requirement.</span>
 			<a href="javascript:void(0)">Connect with us</a>
 		</div>
@@ -313,10 +317,10 @@
 			var start = jQuery('.pdp-product-overview').position().top - 70;
 			if(scrolltop > start) {
 				jQuery('.floater').show();
-				jQuery('.customizable-floater').show();
+				// jQuery('.customizable-floater').show();
 			} else {
 				jQuery('.floater').hide();
-				jQuery('.customizable-floater').hide();
+				// jQuery('.customizable-floater').hide();
 			}
 
 			// var start = jQuery(this).position().top + scrollTop - $('.pdp-config-selection-items').position().top - 50;
@@ -375,6 +379,13 @@
 		jQuery(document).on('click', '.floater-titles li', function() {
         	var identifier = jQuery(this).attr('data-identifier');
 			jQuery('html, body').animate({scrollTop: jQuery("."+identifier).position().top - 50}, 800, 'swing');
+			jQuery('.floater-titles li').removeClass('active');
+			jQuery(this).addClass('active');
+		});
+
+
+		jQuery(document).on('click', '.pdp-product-sme-button', function() {
+			jQuery('html, body').animate({scrollTop: jQuery(".pdp-product-smeconnect").position().top - 50}, 800, 'swing');
 			jQuery('.floater-titles li').removeClass('active');
 			jQuery(this).addClass('active');
 		});

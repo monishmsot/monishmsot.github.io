@@ -900,6 +900,7 @@ a {
 	float: left;
 	width: calc(70% - 20px);
 	margin-left: 20px;
+	position: relative;
 }
 .pdp-product-objective-content p {
 	font-size: 16px;
@@ -911,6 +912,31 @@ a {
 	font-size: 16px;
 	margin-bottom: 20px;
 	margin-left: 25px;
+}
+.pdp-product-objective-content {
+	max-height: 250px;
+	overflow: hidden;
+}
+#pdp-objective-checkbox:checked ~ .pdp-product-objective-content {
+	max-height: none;
+	overflow: visible;
+}
+.pdp-objective-checkbox-label::after {
+	content: "Show More";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0.9);
+	float: left;
+	width: 100%;
+	color: #00b66a;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 1;
+}
+#pdp-objective-checkbox:checked + .pdp-objective-checkbox-label::after {
+	content: "Show Less";
+	bottom: -30px;
 }
 .pdp-ta {
 	float: left;
@@ -965,6 +991,7 @@ a {
 	margin-right: 20px;
 	/*font-size: 15px;*/
 	line-height: 33px;
+	position: relative;
 }
 .pdp-outline .title {
 	font-size: 24px;
@@ -975,6 +1002,11 @@ a {
 	float: left;
 	width: 100%;
 	margin-top: 25px;
+}
+.outline-contents {
+	float: left;
+	width: 100%;
+	padding-left: 10px;
 }
 .outline-content {
 	padding-bottom: 25px;
@@ -1031,6 +1063,32 @@ a {
 }
 .sub-topics ul {
 	list-style-type: disc;
+}
+
+.pdp-product-outline-contents {
+	max-height: 500px;
+	overflow: hidden;
+}
+#pdp-outline-checkbox:checked ~ .pdp-product-outline-contents {
+	max-height: none;
+	overflow: visible;
+}
+.pdp-outline-checkbox-label::after {
+	content: "Show More";
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(235,237,240,0.9);
+	float: left;
+	width: 100%;
+	color: #00b66a;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 1;
+	left: 0;
+}
+#pdp-outline-checkbox:checked + .pdp-outline-checkbox-label::after {
+	content: "Show Less";
+	bottom: -30px;
 }
 .pdp-prerequisite {
 	float: left;
@@ -1185,7 +1243,7 @@ a {
 .product-faq-item .question {
 	cursor: pointer;
 	font-size: 15px;
-	padding: 10px 0;
+	padding: 15px 0;
 	float: left;
 	width: 100%;
 	font-weight: 500;
