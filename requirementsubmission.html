@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="assets/css/style.css"> 
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<title>Requirement Submission</title>
+</head>
+<body class="requirement-submission-index">
+	<header class="page-header"></header>
+	<main class="page-main">
+		<div class="requirement-submission-forms-container">
+
+			<ul class="requirement-submission-steps">
+				<li class="requirement-submission-step sc active">
+					<div class="requirement-submission-step-border"></div>
+					<div class="requirement-submission-step-dot">1</div>
+					<div class="requirement-submission-step-title">Service Category</div>
+				</li>
+				<li class="requirement-submission-step cd ">
+					<div class="requirement-submission-step-border"></div>
+					<div class="requirement-submission-step-dot">2</div>
+					<div class="requirement-submission-step-title">Course Details</div>
+				</li>
+				<li class="requirement-submission-step pd ">
+					<div class="requirement-submission-step-border"></div>
+					<div class="requirement-submission-step-dot">3</div>
+					<div class="requirement-submission-step-title">Participant Details</div>
+				</li>
+				<li class="requirement-submission-step db ">
+					<div class="requirement-submission-step-border"></div>
+					<div class="requirement-submission-step-dot">4</div>
+					<div class="requirement-submission-step-title">Date and Budget</div>
+				</li>
+			</ul>
+
+
+			<div class="requirement-submission-form" id="requirement-service-category-selection">
+				<form action="javascript:void(0)" id="requirement-service-category-form">
+					<div class="field sc-field">
+						<div class="field-title">Please select your Service Category</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-upskilling" />
+							<label for="sc-upskilling">
+								<span class="sc-item-title">Upskilling</span>
+								<span class="sc-item-desc">Upskilling is a workplace trend that facilitates continuous learning by providing training programs and development opportunities that expand an employee's abilities and minimize skill gaps.</span>
+							</label>
+						</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-contentdevelopment" />
+							<label for="sc-contentdevelopment">
+								<span class="sc-item-title">Content Development</span>
+								<span class="sc-item-desc">Content development is the process of researching, writing, gathering, organizing, and editing information for publication. Content development is the process of originating (creating), editing, manipulating and maintaining the contents in order to provide knowledgeable fillings to the users.</span>
+							</label>
+						</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-coaching" />
+							<label for="sc-coaching">
+								<span class="sc-item-title">Coaching</span>
+								<span class="sc-item-desc">Coaching is a form of development in which an experienced person, called a coach, supports a learner or client in achieving a specific personal or professional goal by providing training and guidance.</span>
+							</label>
+						</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-consulting" />
+							<label for="sc-consulting">
+								<span class="sc-item-title">Consulting</span>
+								<span class="sc-item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+							</label>
+						</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-speakers" />
+							<label for="sc-speakers">
+								<span class="sc-item-title">Speakers</span>
+								<span class="sc-item-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+							</label>
+						</div>
+						<div class="sc-subfield">
+							<input type="radio" name="servicecategory" id="sc-learning-journeys" />
+							<label for="sc-learning-journeys">
+								<span class="sc-item-title">Learning Journeys</span>
+								<span class="sc-item-desc">A learning journey is a strategic approach to developing groups of leaders over time. It's based on the principle that true behavior change takes time, and that people learn best together – as long as they can personalize their experience.</span>
+							</label>
+						</div>
+					</div>
+					<div class="field">
+						<button>Next</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="requirement-submission-form" id="requirement-course-details-selection" style="display: none;">
+				<form action="javascript:void(0)" id="requirement-course-details-form">
+					<div class="field">
+						<span class="field-title">A brief description of your training in one or two lines</span>
+						<textarea name="cd-desc" id="cd-desc"></textarea>
+						<span class="note">Eg: Design thinking for mid-level management</span>
+					</div>
+					<div class="field">
+						<span class="field-title">What skills do you want your team to be trained on?</span>
+						<textarea name="cd-skills" id="cd-skills"></textarea>
+						<span class="note">Eg: java, python</span>
+					</div>
+					<div class="field select fouritems">
+						<span class="field-title">What is the mode of delivery you want?</span>
+						<ul>
+							<li>
+								<input type="radio" name="mode" id="ilt" />
+								<label for="ilt">ILT / Classroom</label>
+							</li>
+							<li>
+								<input type="radio" name="mode" id="vilt" />
+								<label for="vilt">VILT</label>
+							</li>
+							<li>
+								<input type="radio" name="mode" id="self" />
+								<label for="self">Self Paced</label>
+							</li>
+							<li>
+								<input type="radio" name="mode" id="blended" />
+								<label for="blended">Blended</label>
+							</li>
+						</ul>
+					</div>
+					<div class="field">
+						<a href="javascript:void(0)" class="backbtn" data-form="requirement-service-category-selection" data-active="sc">Back</a>
+						<button>Next</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="requirement-submission-form" id="requirement-participant-details-selection" style="display: none;">
+				<form action="javascript:void(0)" id="requirement-participant-details-form">
+					<div class="field">
+						<span class="field-title">What is the number of participants?</span>
+						<input type="text" name="participants" />
+					</div>
+					<div class="field">
+						<span class="field-title">What is the department of your participants?</span>
+						<input type="text" name="dept" />
+					</div>
+					<div class="field select oneitem">
+						<span class="field-title">What is the designation of your participants?</span>
+						<ul>
+							<li>
+								<input type="radio" name="designation" id="freshers" />
+								<label for="freshers">Freshers</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="ic" />
+								<label for="ic">Individual Contributor</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="tl" />
+								<label for="tl">Team Lead</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="flm" />
+								<label for="flm">First Line Management</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="mm" />
+								<label for="mm">Middle Management</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="stm" />
+								<label for="stm">Senior or Top Management</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="cxo" />
+								<label for="cxo">CXO</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="other" />
+								<label for="other">Other</label>
+							</li>
+						</ul>
+					</div>
+					<div class="field">
+						<a href="javascript:void(0)" class="backbtn" data-form="requirement-course-details-selection" data-active="cd">Back</a>
+						<button>Next</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="requirement-submission-form" id="requirement-date-budget-selection" style="display: none;">
+				<form action="javascript:void(0)" id="requirement-date-budget-form">
+					<div class="field">
+						<span class="field-title">Do you have any tentative start date?</span>
+						<input type="text" name="participants" />
+					</div>
+					<div class="field select oneitem">
+						<span class="field-title">Do you have a budget range in mind?</span>
+						<ul>
+							<li>
+								<input type="radio" name="designation" id="ilt" />
+								<label for="ilt">10k to 1 Lakh</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="vilt" />
+								<label for="vilt">1 Lakh to 10 Lakhs</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="self" />
+								<label for="self">10 Lakhs to 50 Lakhs</label>
+							</li>
+							<li>
+								<input type="radio" name="designation" id="blended" />
+								<label for="blended">I don't know</label>
+							</li>
+						</ul>
+					</div>
+					<div class="field">
+						<span class="field-title">Do you have any vendor in mind?</span>
+						<input type="text" name="dept" />
+					</div>
+					<div class="field">
+						<a href="javascript:void(0)" class="backbtn" data-form="requirement-participant-details-selection" data-active="pd">Back</a>
+						<button>Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="requirement-howitworks-container">
+			<div class="container">
+				<span class="title">How it works</span>
+				<div class="requirement-howitworks">
+					
+				</div>
+			</div>
+		</div>
+		<div class="requirement-testimonials-container">
+			<div class="container">
+				<span class="title">Testimonials</span>
+				<div class="requirement-testimonials owl-carousel">
+					<div class="requirement-testimonial">
+						<p>OT removed our need of contacting multiple learning solution providers. Now we have just one vendor to do all the tasks and it saves so much time and resources. They also deliver any new training requests very quickly and efficiently.</p>
+						<span class="testi-name">Procurement Head</span>
+						<span class="testi-position">Top pharmaceutical Company</span>
+					</div>
+					<div class="requirement-testimonial">
+						<p>I would like to thank the OT team for their timely and efficient support to fulfil our technical and behavioural training needs. With their support, we have successfully completed multiple training sessions with great employee satisfaction and learning. Looking forward to continued support from them in future too.</p>
+						<span class="testi-name">Nupur Nautiyal</span>
+						<span class="testi-position">Director HRBP and L&D, Mobileum</span>
+					</div>
+					<div class="requirement-testimonial">
+						<p>In the effort to reduce logistical hassle and simplify the training fulfillment process, we have partnered with OT. They have tied up with various other industry vendors who are well known in the learning space. This makes the trainer finalization process easier than what we used to follow in the past.</p>
+						<span class="testi-name">L&D Head</span>
+						<span class="testi-position">Fortune 50 Company</span>
+					</div>
+					<div class="requirement-testimonial">
+						<p>OT removed our need of contacting multiple learning solution providers. Now we have just one vendor to do all the tasks and it saves so much time and resources. They also deliver any new training requests very quickly and efficiently.</p>
+						<span class="testi-name">Procurement Head</span>
+						<span class="testi-position">Top pharmaceutical Company</span>
+					</div>
+					<div class="requirement-testimonial">
+						<p>I would like to thank the OT team for their timely and efficient support to fulfil our technical and behavioural training needs. With their support, we have successfully completed multiple training sessions with great employee satisfaction and learning. Looking forward to continued support from them in future too.</p>
+						<span class="testi-name">Nupur Nautiyal</span>
+						<span class="testi-position">Director HRBP and L&D, Mobileum</span>
+					</div>
+					<div class="requirement-testimonial">
+						<p>In the effort to reduce logistical hassle and simplify the training fulfillment process, we have partnered with OT. They have tied up with various other industry vendors who are well known in the learning space. This makes the trainer finalization process easier than what we used to follow in the past.</p>
+						<span class="testi-name">L&D Head</span>
+						<span class="testi-position">Fortune 50 Company</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pdp-product-faq fullwidth">
+			<div class="container">
+				<span class="title">FAQs</span>
+				<div class="product-faq">
+					<div class="product-faq-item">
+						<span class="question">What are the modes through which training is available for this course?</span>
+						<span class="answer"><ul><li>Training delivery mode is of 2 types:</li><li>1. Classroom Training</li><li>2. Live Virtual Classroom Training</li><li>Please refer to the mode of training section in the course description for details.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">What is classroom training?</span>
+						<span class="answer"><ul><li>Classroom training is an in-person instructor-led training conducted in a classroom or any physical environment.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">What is LVC training?</span>
+						<span class="answer"><ul><li>In Live Virtual Classroom (LVC) training, the live instructor imparts training in an interactive way through online mode or virtual environment.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Do you offer self-paced training?</span>
+						<span class="answer"><ul><li>No, currently we do not offer self-paced learning.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Do you offer customized training to fit a specific industry or business unit?</span>
+						<span class="answer"><ul><li>Yes, we do offer customized training programs to fit any specific industry or as per business unit requirements. There are two types of customization; course design customization and course content customization.</li><li>For course design customization, please contact our support team for details.</li><li>The extent of course content customization varies as per the service band selected by the business requester. For more details, please refer to Service band contextualization on the pre-cart page.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">What should a participant refer to before attending the course?</span>
+						<span class="answer"><ul><li>A participant should refer to the following:</li><li>1) Pre-read (if shared any)</li><li>2) Prerequisites (If any)</li><li>3) Course Objectives</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Do the participants have to meet the prerequisites before attending the course?</span>
+						<span class="answer"><ul><li>Yes, it is necessary. Prerequisites ensure the preparedness and understanding of participants on the foundation skills required to pursue the course. </li><li>The participants enrolled in a course in which they have not met the prerequisites, gain little to no knowledge on the subject. It may also hinder the learning experiences of other participants in the course.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Is there a pre-connect with participants before training?</span>
+						<span class="answer"><ul><li>Yes, participant pre-connect is part of the service band feature. Currently, it is applicable from the Gold service band 	onwards. Kindly refer to the service band to avail of this service.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Is there a post-connect with participants after training?</span>
+						<span class="answer"><ul><li>Yes, participant post-connect is part of the Diamond service band. Kindly refer to the service band to avail of this service.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">What happens in a pre-connect?</span>
+						<span class="answer"><ul><li>In a pre-connect, the trainer/facilitator connects with their participants before the scheduled training. It is focused on rapport building and setting the objectives for the training or the program. The trainer comes to understand the expectations of the trainees and can modify the training process if necessary.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">What happens in a post-connect?</span>
+						<span class="answer"><ul><li>Post-connect is meant for doubt clearance. The trainer/facilitator clarifies any questions or concerns of the participants relating to the training session.</li></ul></span>
+					</div>
+					<div class="product-faq-item">
+						<span class="question">Will the participants receive a certificate of completion after attending the course?</span>
+						<span class="answer"><ul><li>Yes, each participant will receive a certificate of completion post attending their training through Ordertrainings.</li></ul></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer"></footer>
+	<script type="text/javascript"> 
+		$(function(){ 
+			$(".page-header").load("header.html");
+			$(".page-footer").load("footer.html");
+		});
+	</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+
+			jQuery(document).on('click', '.product-faq-item .question', function() {
+				jQuery(this).toggleClass("active");
+			});
+
+			$(".owl-carousel").owlCarousel({    
+				loop:true,
+				items:3,
+				margin:0,
+				stagePadding: 0,
+				autoplay:false  
+			});
+
+			jQuery('#requirement-service-category-form').on("submit", function() {
+				jQuery('.requirement-submission-form').hide();
+				jQuery('#requirement-course-details-selection').show();
+				jQuery('.requirement-submission-step').removeClass('active');
+				jQuery('.requirement-submission-step.cd').addClass('active');
+			});
+
+			jQuery('#requirement-course-details-form').on("submit", function() {
+				jQuery('.requirement-submission-form').hide();
+				jQuery('#requirement-participant-details-selection').show();
+				jQuery('.requirement-submission-step').removeClass('active');
+				jQuery('.requirement-submission-step.pd').addClass('active');
+			});
+
+			jQuery('#requirement-participant-details-form').on("submit", function() {
+				jQuery('.requirement-submission-form').hide();
+				jQuery('#requirement-date-budget-selection').show();
+				jQuery('.requirement-submission-step').removeClass('active');
+				jQuery('.requirement-submission-step.db	').addClass('active');
+			});
+
+			jQuery('.backbtn').on("click", function() {
+				var dataform = jQuery(this).attr('data-form');
+				var active = jQuery(this).attr('data-active');
+				jQuery('.requirement-submission-form').hide();
+				jQuery('#'+dataform).show();
+				jQuery('.requirement-submission-step').removeClass('active');
+				jQuery('.requirement-submission-step.'+active).addClass('active');
+			});
+
+
+		});
+	</script>
+</body>
+</html>

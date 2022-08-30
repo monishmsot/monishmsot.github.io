@@ -33,6 +33,9 @@ ul > li {
 a {
 	text-decoration: none;
 }
+button {
+	font-family: 'Rubik', sans-serif;
+}
 .page-header {
 	float: left;
 	width: 100%;
@@ -1919,6 +1922,238 @@ a {
 	position: absolute;
 	top: -20px;
 	right: 0;
+}
+
+/* Requirement Submission */
+.requirement-submission-index .page-main {
+	float: left;
+	width: 100%;
+	margin: 0 auto;
+}
+.requirement-submission-forms-container {
+	float: left;
+	width: 100%;
+	padding: 50px 0;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+}
+.requirement-submission-steps {
+	padding: 0;
+	position: relative;
+	float: none;
+	width: 800px;
+	display: table;
+	margin: 0 auto;
+}
+.requirement-submission-steps li.requirement-submission-step {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+.requirement-submission-steps li.requirement-submission-step .requirement-submission-step-border {
+	float: left;
+	width: 100%;
+	height: 2px;
+	background-color: #3b8fe5;
+	position: absolute;
+	left: 50%;
+	top: 20px;
+}
+.requirement-submission-steps li.requirement-submission-step .requirement-submission-step-dot {
+	float: left;
+	width: 41px;
+	height: 41px;
+	background-color: #3b8fe5;
+	position: relative;
+	border-radius: 100%;
+	left: calc(50% - 7px);
+	z-index: 1;
+	margin-bottom: 10px;
+	border: 2px solid #f9f9f9;
+	padding: 8px 15px;
+	color: #fff;
+}
+.requirement-submission-steps li.requirement-submission-step .requirement-submission-step-title {
+    position: relative;
+    width: auto;
+    text-align: center;
+    float: none;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.requirement-submission-steps li:last-child .requirement-submission-step-border {
+    display: none;
+}
+.requirement-submission-steps li.requirement-submission-step.active .requirement-submission-step-border, .requirement-submission-steps li.requirement-submission-step.active .requirement-submission-step-dot {
+    background-color: #3b8fe5;
+}
+
+.requirement-submission-steps li.requirement-submission-step.active .requirement-submission-step-title {
+    color: #3b8fe5;
+}
+
+.requirement-submission-steps li.requirement-submission-step.active ~ li.requirement-submission-step .requirement-submission-step-border, .requirement-submission-steps li.requirement-submission-step.active ~ li.requirement-submission-step .requirement-submission-step-dot {
+    background-color: #e7e7e7;
+    color: #333;
+}
+
+
+
+.requirement-submission-form {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 30px;
+	box-shadow: 0px 8px 30px 1px rgba(0,0,0,0.15);
+	display: table;
+}
+.requirement-submission-form .field {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.requirement-submission-form .field .field-title {
+	float: left;
+	width: 100%;
+}
+.requirement-submission-form .field textarea, .requirement-submission-form .field input[type=text], .requirement-submission-form .field select {
+	float: left;
+	width: 100%;
+	min-height: 35px;
+}
+.requirement-submission-form .field .note {
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	color: rgba(0,0,0,0.6);
+}
+
+.requirement-submission-form .field.select li {
+	float: left;
+	width: calc(33.33% - 20px);
+	margin: 20px 20px 0px 0;
+}
+.requirement-submission-form .field.select.oneitem li {
+	width: calc(100% - 20px);
+}
+.requirement-submission-form .field.select.twoitems li {
+	width: calc(50% - 20px);
+}
+.requirement-submission-form .field.select.threeitems li {
+	width: calc(33.33% - 20px);
+}
+.requirement-submission-form .field.select.fouritems li {
+	width: calc(25% - 20px);
+}
+
+.requirement-submission-form .field button {
+	background-color: #3b8fe5;
+	border: 1px solid #3b8fe5;
+	padding: 10px 20px;
+	float: right;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.requirement-submission-form .field.sc-field {
+	position: relative;
+	padding-bottom: 75px;
+}
+.requirement-submission-form .sc-subfield {
+	float: left;
+	width: calc(33.33% - 20px);
+	margin: 20px 20px 0 0;
+}
+.requirement-submission-form .sc-subfield input {
+	display: none;
+}
+.requirement-submission-form .sc-subfield label {
+	border: 2px solid #ccc;
+	padding: 40px 20px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.requirement-submission-form .sc-subfield input:checked ~ label {
+	border: 2px solid #3b8fe5;
+}
+.requirement-submission-form .sc-subfield .sc-item-desc {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+}
+.requirement-submission-form .sc-subfield input:checked ~ label .sc-item-desc {
+	display: block;
+}
+
+.requirement-submission-index .container {
+	padding: 70px 0;
+	display: flow-root;
+	width: 100%;
+}
+.requirement-howitworks-container .title, .requirement-testimonials-container .title {
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 25px;
+	float: left;
+	width: 100%;
+}
+.requirement-testimonials-container {
+	background-color: #f9f9f9;
+	float: left;
+	width: 100%;
+}
+.requirement-testimonials {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.requirement-testimonial {
+	background-color: #fff;
+	margin: 20px;
+	padding: 20px;
+	float: left;
+	border: 1px solid #ccc;
+	min-height: 270px;
+}
+.requirement-testimonial p {
+	margin: 0;
+	text-align: justify;
+}
+.testi-name {
+	float: left;
+	width: 100%;
+	text-align: right;
+	margin-top: 20px;
+}
+.testi-position {
+	float: left;
+	width: 100%;
+	text-align: right;
+	margin-top: 5px;
+}
+.requirement-testimonials .owl-dots {
+	position: absolute;
+	/*bottom: 0;*/
+	left: 50%;
+	transform: translateX(-50%);
+}
+.requirement-testimonials.owl-carousel .owl-dots .owl-dot {
+	border: 1px solid #333;
+	margin: 10px 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+.requirement-testimonials.owl-carousel .owl-dots .owl-dot.active {
+	background-color: #333;
 }
 
 @media only screen and (max-width: 767px) {
